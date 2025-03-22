@@ -3,7 +3,7 @@
 int main() {
     char nomecidade1[50], nomecidade2[50], estado1[3], estado2[3], codigoest1[4], codigoest2[4];
     unsigned long int populacao1, populacao2;
-    short int turistico1, turistico2;
+    int turistico1, turistico2;
     float area1, area2, pib1, pib2, densi1, densi2, pibper1, pibper2;
     float superPoder1, superPoder2;
 
@@ -44,7 +44,7 @@ int main() {
     scanf("%d", &turistico2);
     densi2 = (float)populacao2 / area2;
     pibper2 = pib2 / (float)populacao2;
-    superPoder1 = populacao1 + area1 + pib1 + turistico1 + pibper1 + (1/densi2);
+    superPoder2 = populacao2 + area2 + pib2 + turistico2 + pibper2 + (1/densi2);
 
     printf("As cartas são: \n\n");
     printf("Estado da cidade 1: %s \n", estado1);
