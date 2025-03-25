@@ -73,13 +73,14 @@ int main() {
 
     printf("\n--------------- DUELO ------------------\n\n");
 
-    printf("A cidade 1 tem mais população 1 que a cidade 2? %d \n", populacao1>populacao2);
-    printf("A cidade 1 tem maior área que a cidade 2? %d\n", area1>area2);
-    printf("O PIB da cidade 1 é maior que o PIB da cidade 2? %d\n", pib1>pib2);
-    printf("A cidade 1 tem mais pontos turísticos que a cidade 2? %d\n", turistico1>turistico2);
-    printf("A cidade 1 tem maior densidade que a cidade 2? %d\n", densi1>densi2);
-    printf("O pib per capta da cidade 1 é maior que da cidade 2? %d\n", pibper1>pibper2);
-    printf("O superpoder da cidade 1 é maior que o da cidade 2? %d\n", superPoder1 > superPoder2 ); 
+    if (populacao1>populacao2){
+        printf("A cidade de %s tem a maior população com %lu habitantes.",nomecidade1, populacao1);
+    }else{
+       
+        printf("A cidade de %s tem a maior população com %lu habitantes.",nomecidade2, populacao2);
+    }
+
+    
 
     return 0;
 }
