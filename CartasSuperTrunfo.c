@@ -72,15 +72,70 @@ int main() {
     printf("SUPER PODER da cidade 2: %f", superPoder2);
 
     printf("\n--------------- DUELO ------------------\n\n");
+    int escolha;
 
-    if (populacao1>populacao2){
-        printf("A cidade de %s tem a maior população com %lu habitantes.",nomecidade1, populacao1);
-    }else{
-       
-        printf("A cidade de %s tem a maior população com %lu habitantes.",nomecidade2, populacao2);
-    }
+    printf("escolha o atributo para comparação:\n");
+    printf("1. população\n2. área\n3. pib\n4. pontos turísticos\n5. densidade demográfica.\n");
+    scanf("%d", &escolha);
 
     
+
+    switch(escolha){
+        case 1:
+            if (populacao1>populacao2){
+                printf("a cidade %s, com a população de %d , ganhou!\n", nomecidade1,populacao1);
+            }else if (populacao1==populacao2){
+                printf("empate!\n");
+            }else{
+                printf("a cidade %s, com a população de %d , ganhou!\n", nomecidade2,populacao2);
+            }
+            break;
+
+        case 2:
+            if (area1>area2){
+                printf("a cidade %s, com a área de %f , ganhou!\n", nomecidade1,area1);
+            }else if (area1==area2){
+                printf("empate!\n");
+            }else{
+                printf("a cidade %s, com a população de %f , ganhou!\n", nomecidade2,area2);
+            }
+            break;
+
+        case 3:
+            if (pib1>pib2){
+                printf("a cidade %s, com a população de %f , ganhou!\n", nomecidade1,pib1);
+            }else if (pib1==pib2){
+                printf("empate!\n");
+            }else{
+                printf("a cidade %s, com a população de %f , ganhou!\n", nomecidade2,pib2);
+            }
+            break;
+
+        case 4:
+            if (turistico1>turistico2){
+                printf("a cidade %s, com a população de %d , ganhou!\n", nomecidade1,turistico1);
+            }else if (turistico1==turistico2){
+                printf("empate!\n");
+            }else{
+                printf("a cidade %s, com a população de %d , ganhou!\n", nomecidade2,turistico2);
+            }
+            break;
+
+        case 5:
+            if (densi1<densi2){
+                printf("a cidade %s, com a população de %f , ganhou!\n", nomecidade1,densi1);
+            }else if (densi1==densi2){
+                printf("empate!\n");
+            }else{
+                printf("a cidade %s, com a população de %f , ganhou!\n", nomecidade2,densi2);
+            }
+            break;
+
+        default:
+          printf("inválido.");
+            break;
+    }
+
 
     return 0;
 }
